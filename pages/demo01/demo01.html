@@ -1,0 +1,34 @@
+
+<style>
+    div {
+        color: red;
+        font-style: italic;
+    }
+</style>
+<div>
+    <pre>
+        HTM三大核心技术
+            一  HTML
+            二  CSS
+            三  JavaScript
+    </pre>
+</div>
+<script>
+    let div = document.querySelector('div');
+    let flag = true;
+    div.onmouseover = function(){
+        timer = setInterval(()=>{
+            if(flag){
+                div.style.color = 'blue';
+                div.style.fontStyle = 'normal';
+            }else{
+                div.style.color = 'red';
+                div.style.fontStyle = 'italic';
+            }
+            flag = !flag;
+        },500);
+    }
+    div.onmouseout = function(){
+        clearInterval(timer);
+    }
+</script>
